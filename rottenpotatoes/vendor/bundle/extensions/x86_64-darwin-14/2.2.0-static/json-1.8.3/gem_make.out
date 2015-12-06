@@ -1,0 +1,13 @@
+current directory: /Users/director/devbox/rubybox/berkeley/hw-bdd-tdd-cycle/rottenpotatoes/vendor/bundle/gems/json-1.8.3/ext/json
+/Users/director/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20151206-39926-1llnqrh.rb extconf.rb
+creating Makefile
+
+current directory: /Users/director/devbox/rubybox/berkeley/hw-bdd-tdd-cycle/rottenpotatoes/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/director/devbox/rubybox/berkeley/hw-bdd-tdd-cycle/rottenpotatoes/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/director/devbox/rubybox/berkeley/hw-bdd-tdd-cycle/rottenpotatoes/vendor/bundle/gems/json-1.8.3/ext/json
+make "DESTDIR=" install
