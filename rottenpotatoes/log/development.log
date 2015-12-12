@@ -2203,3 +2203,23 @@ Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-12-12 11:5
 
 
 Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-12-12 11:56:56 +0000
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2015-12-12 12:28:25 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 268ms (Views: 226.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-12-12 12:28:26 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2015-12-12 12:28:26 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2015-12-12 12:28:26 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2015-12-12 12:28:26 +0000

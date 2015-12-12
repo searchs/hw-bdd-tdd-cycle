@@ -253,8 +253,11 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
-Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
-  pending
+Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |mv, dirtor|
+
+  @movie = Movie.find_by_title(mv)
+  d = @movie['director']
+  d.equal? dirtor
 end
 
 
@@ -274,4 +277,6 @@ Given(/^I am on the details page for "(.*?)"$/) do |arg1|
 
  visit movie_path(Movie.find_by_title(arg1))
 end
+
+
 
