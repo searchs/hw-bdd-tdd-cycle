@@ -77,4 +77,18 @@ class MoviesController < ApplicationController
 
   end
 
-end
+  def search_by_director(dname)
+    @dct = Movie.find_by_id(params[:id]).director
+
+    if dname.nil? || dname.empty?
+      flash.keep(:notice)
+      flash[:notice] = "'#{Movie.find(params[:id]).title}' has no director info"
+      flash.keep(:notice)
+      redirect_to movies_path
+    else
+      @movies = Movie.where(director: dname)
+
+  end
+
+  end
+  end
