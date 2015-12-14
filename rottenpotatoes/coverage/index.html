@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-14T01:44:12+00:00">2015-12-14T01:44:12+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-14T02:19:39+00:00">2015-12-14T02:19:39+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -800,7 +800,7 @@
         <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
-          <code class="ruby">    @dyrect = Movie.find(params[:id]).director</code>
+          <code class="ruby">    @dyrect = Movie.find_by_id(params[:id]).director</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="68">
@@ -842,7 +842,7 @@
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">      @movies = Movie.find_by_director(@dyrect)</code>
+          <code class="ruby">      @movies = Movie.where(director: @dyrect)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">

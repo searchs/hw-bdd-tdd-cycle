@@ -64,14 +64,14 @@ class MoviesController < ApplicationController
 
   def find_movies_with_same_director
 
-    @dyrect = Movie.find(params[:id]).director
+    @dyrect = Movie.find_by_id(params[:id]).director
     if @dyrect.nil? || @dyrect.empty?
       flash.keep(:notice)
-      flash[:notice] = "'#{Movie.find(params[:id]).title}' has no director info."
+      flash[:notice] = "'#{Movie.find(params[:id]).title}' has no director info"
       flash.keep(:notice)
       redirect_to movies_path
     else
-      @movies = Movie.find_by_director(@dyrect)
+      @movies = Movie.where(director: @dyrect)
     end
 
 

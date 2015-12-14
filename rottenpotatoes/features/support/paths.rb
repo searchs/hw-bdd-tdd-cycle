@@ -25,16 +25,15 @@ module NavigationHelpers
       when /^the movies page$/ then
         '/movies'
 
+      when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
 
-      when /^the edit page for "(.*)"$/
+
+      when /^the edit page for "(.*)"$/i
         edit_movie_path(Movie.find_by_title($1)[:id])
 
-      when /^the details page for "(.*)"$/
+      when /^the details page for "(.*)"$/i
         movie_path(Movie.find_by_title($1)[:id])
 
-      # when /^the Similar Movies page for "(.*)"$/
-      #   m = Movie.find_by_title($1)
-      #   find_with_same_director_path(Movie.find_by_director(m['director']))
       when /^the Similar Movies page for "(.*)"$/i
         "/movies/find_movies_with_same_director/#{Movie.find_by_title($1).id}"
 
