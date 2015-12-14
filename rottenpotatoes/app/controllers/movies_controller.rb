@@ -62,7 +62,7 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-  def find_movies_with_same_director
+  def same_director
 
     @dyrect = Movie.find_by_id(params[:id]).director
     if @dyrect.nil? || @dyrect.empty?

@@ -35,7 +35,7 @@ module NavigationHelpers
         movie_path(Movie.find_by_title($1)[:id])
 
       when /^the Similar Movies page for "(.*)"$/i
-        "/movies/find_movies_with_same_director/#{Movie.find_by_title($1).id}"
+        "/movies/same_director/#{Movie.find_by_title($1).id}"
 
 
       else
