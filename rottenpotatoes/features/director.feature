@@ -32,3 +32,20 @@ Feature: search for movies by director
     When  I follow "Find Movies With Same Director"
     Then  I should be on the home page
     And   I should see "'Alien' has no director info"
+
+  Scenario: delete existing movie
+    Given I am on the details page for "Alien"
+    And  I press "Delete"
+    Then the message "Movie 'Alien' deleted." is displayed
+
+
+  Scenario: sort movies alphabetically
+    Given I am on the movies page
+    When I follow "Movie Title"
+    Then I should see "Aladdin" before "Amelie"
+
+
+  Scenario: sort movies in increasing order of release date
+    Given I am on the movies page
+    When I follow "Release Date"
+    Then I should see "6\-Apr\-1968" before "21\-Jun\-2000"
